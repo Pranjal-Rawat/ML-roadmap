@@ -1,152 +1,193 @@
 export const topics = {
-  foundations: {
-    title: "Foundations",
-    topics: [
+  "foundations": {
+    "title": "Foundations",
+    "topics": [
       {
-        id: "math",
-        title: "Mathematics for ML",
-        description: "Learn linear algebra, calculus, and probability.",
-        subtopics: [
-          { id: "linear-algebra", title: "Linear Algebra" },
-          { id: "calculus", title: "Calculus" },
-          { id: "probability", title: "Probability & Statistics" },
+        "id": "intro-ml",
+        "title": "Introduction to ML",
+        "description": "Learn the basics of machine learning, its types, and applications.",
+        "subtopics": [
+          { "id": "what-is-ml", "title": "What is Machine Learning?", "description": "Overview of ML and its importance." },
+          { "id": "types-of-ml", "title": "Types of ML", "description": "Supervised, unsupervised, and reinforcement learning." },
+          { "id": "ml-applications", "title": "Applications of ML", "description": "Real-world use cases of ML." }
         ],
-        related: ["programming", "data-analysis"],
-        resources: [
-          { title: "Linear Algebra Course", link: "https://example.com/linear-algebra" },
-          { title: "Calculus Book", link: "https://example.com/calculus-book" },
-        ],
+        "related": ["math-ml", "programming-ml"]
       },
       {
-        id: "programming",
-        title: "Programming",
-        description: "Master Python basics and data structures.",
-        subtopics: [
-          { id: "python-basics", title: "Python Basics" },
-          { id: "data-structures", title: "Data Structures" },
-          { id: "algorithms", title: "Algorithms" },
+        "id": "math-ml",
+        "title": "Mathematics for ML",
+        "description": "Learn linear algebra, calculus, and probability for ML.",
+        "subtopics": [
+          { "id": "linear-algebra", "title": "Linear Algebra", "description": "Vectors, matrices, eigenvalues, and eigenvectors." },
+          { "id": "calculus", "title": "Calculus", "description": "Derivatives, integrals, and optimization." },
+          { "id": "probability", "title": "Probability & Statistics", "description": "Probability distributions and statistical inference." }
         ],
-        related: ["math", "data-analysis"],
-        resources: [
-          { title: "Python Crash Course", link: "https://example.com/python-crash-course" },
-          { title: "Data Structures Tutorial", link: "https://example.com/data-structures" },
-        ],
+        "related": ["intro-ml", "programming-ml"]
       },
       {
-        id: "data-analysis",
-        title: "Data Analysis",
-        description: "Explore Pandas, NumPy, and data visualization.",
-        subtopics: [
-          { id: "pandas", title: "Pandas" },
-          { id: "numpy", title: "NumPy" },
-          { id: "data-visualization", title: "Data Visualization" },
+        "id": "programming-ml",
+        "title": "Programming for ML",
+        "description": "Master Python and essential libraries for ML.",
+        "subtopics": [
+          { "id": "python-basics", "title": "Python Basics", "description": "Python syntax, control structures, and functions." },
+          { "id": "numpy", "title": "NumPy", "description": "Numerical computations and array operations." },
+          { "id": "pandas", "title": "Pandas", "description": "Data manipulation and analysis." }
         ],
-        related: ["math", "programming"],
-        resources: [
-          { title: "Pandas Documentation", link: "https://pandas.pydata.org/" },
-          { title: "Matplotlib Tutorial", link: "https://example.com/matplotlib" },
-        ],
+        "related": ["intro-ml", "math-ml"]
       },
-    ],
+      {
+        "id": "data-preprocessing",
+        "title": "Data Preprocessing",
+        "description": "Clean, transform, and prepare data for ML.",
+        "subtopics": [
+          { "id": "data-cleaning", "title": "Data Cleaning", "description": "Handle missing data and outliers." },
+          { "id": "feature-scaling", "title": "Feature Scaling", "description": "Normalize and standardize data." },
+          { "id": "feature-encoding", "title": "Feature Encoding", "description": "Convert categorical data to numerical." }
+        ],
+        "related": ["programming-ml", "supervised"]
+      }
+    ]
   },
-  coreML: {
-    title: "Core Machine Learning",
-    topics: [
+  "coreML": {
+    "title": "Core Machine Learning",
+    "topics": [
       {
-        id: "supervised",
-        title: "Supervised Learning",
-        description: "Understand regression and classification.",
-        subtopics: [
-          { id: "regression", title: "Regression" },
-          { id: "classification", title: "Classification" },
-          { id: "svm", title: "Support Vector Machines (SVM)" },
+        "id": "supervised",
+        "title": "Supervised Learning Algorithms",
+        "description": "Learn regression and classification techniques.",
+        "subtopics": [
+          { "id": "linear-regression", "title": "Linear Regression", "description": "Predict continuous values." },
+          { "id": "logistic-regression", "title": "Logistic Regression", "description": "Classify binary outcomes." },
+          { "id": "decision-trees", "title": "Decision Trees", "description": "Tree-based classification and regression." }
         ],
-        related: ["unsupervised", "evaluation"],
-        resources: [
-          { title: "Supervised Learning Course", link: "https://example.com/supervised-learning" },
-          { title: "SVM Tutorial", link: "https://example.com/svm-tutorial" },
-        ],
+        "related": ["unsupervised", "evaluation"]
       },
       {
-        id: "unsupervised",
-        title: "Unsupervised Learning",
-        description: "Learn clustering and dimensionality reduction.",
-        subtopics: [
-          { id: "clustering", title: "Clustering" },
-          { id: "pca", title: "Principal Component Analysis (PCA)" },
-          { id: "k-means", title: "K-Means" },
+        "id": "unsupervised",
+        "title": "Unsupervised Learning Algorithms",
+        "description": "Learn clustering and dimensionality reduction.",
+        "subtopics": [
+          { "id": "k-means", "title": "K-Means Clustering", "description": "Partition data into clusters." },
+          { "id": "hierarchical-clustering", "title": "Hierarchical Clustering", "description": "Build nested clusters." },
+          { "id": "pca", "title": "Principal Component Analysis (PCA)", "description": "Reduce dimensionality of data." }
         ],
-        related: ["supervised", "evaluation"],
-        resources: [
-          { title: "Unsupervised Learning Course", link: "https://example.com/unsupervised-learning" },
-          { title: "PCA Explained", link: "https://example.com/pca-explained" },
-        ],
+        "related": ["supervised", "evaluation"]
       },
       {
-        id: "evaluation",
-        title: "Model Evaluation",
-        description: "Study metrics like accuracy, precision, and recall.",
-        subtopics: [
-          { id: "metrics", title: "Metrics" },
-          { id: "cross-validation", title: "Cross-Validation" },
-          { id: "confusion-matrix", title: "Confusion Matrix" },
+        "id": "evaluation",
+        "title": "Evaluation of ML Models",
+        "description": "Study metrics and techniques for model evaluation.",
+        "subtopics": [
+          { "id": "metrics", "title": "Metrics", "description": "Accuracy, precision, recall, and F1-score." },
+          { "id": "cross-validation", "title": "Cross-Validation", "description": "Assess model generalizability." },
+          { "id": "confusion-matrix", "title": "Confusion Matrix", "description": "Visualize classification performance." }
         ],
-        related: ["supervised", "unsupervised"],
-        resources: [
-          { title: "Model Evaluation Guide", link: "https://example.com/model-evaluation" },
-          { title: "Confusion Matrix Tutorial", link: "https://example.com/confusion-matrix" },
-        ],
+        "related": ["supervised", "unsupervised"]
       },
-    ],
+      {
+        "id": "ensemble",
+        "title": "Ensemble Learning",
+        "description": "Combine models for better performance.",
+        "subtopics": [
+          { "id": "bagging", "title": "Bagging", "description": "Bootstrap aggregating for variance reduction." },
+          { "id": "boosting", "title": "Boosting", "description": "Sequentially improve model performance." },
+          { "id": "stacking", "title": "Stacking", "description": "Combine models using a meta-learner." }
+        ],
+        "related": ["supervised", "evaluation"]
+      },
+      {
+        "id": "dimensionality-reduction",
+        "title": "Dimensionality Reduction Techniques",
+        "description": "Simplify datasets while retaining important information.",
+        "subtopics": [
+          { "id": "pca", "title": "PCA", "description": "Principal Component Analysis." },
+          { "id": "t-sne", "title": "t-SNE", "description": "Visualize high-dimensional data." },
+          { "id": "lda", "title": "LDA", "description": "Linear Discriminant Analysis." }
+        ],
+        "related": ["unsupervised", "evaluation"]
+      }
+    ]
   },
-  advanced: {
-    title: "Advanced Topics",
-    topics: [
+  "advanced": {
+    "title": "Advanced Topics",
+    "topics": [
       {
-        id: "deep-learning",
-        title: "Deep Learning",
-        description: "Dive into neural networks, CNNs, and RNNs.",
-        subtopics: [
-          { id: "neural-networks", title: "Neural Networks" },
-          { id: "cnns", title: "Convolutional Neural Networks (CNNs)" },
-          { id: "rnns", title: "Recurrent Neural Networks (RNNs)" },
+        "id": "deep-learning",
+        "title": "Deep Learning",
+        "description": "Dive into neural networks, CNNs, and RNNs.",
+        "subtopics": [
+          { "id": "neural-networks", "title": "Neural Networks", "description": "Basics of feedforward and backpropagation." },
+          { "id": "cnns", "title": "CNNs", "description": "Convolutional Neural Networks for image processing." },
+          { "id": "rnns", "title": "RNNs", "description": "Recurrent Neural Networks for sequence modeling." }
         ],
-        related: ["nlp", "rl"],
-        resources: [
-          { title: "Deep Learning Book", link: "https://example.com/deep-learning-book" },
-          { title: "CNN Tutorial", link: "https://example.com/cnn-tutorial" },
-        ],
+        "related": ["nlp", "rl"]
       },
       {
-        id: "nlp",
-        title: "Natural Language Processing",
-        description: "Explore text processing and transformers.",
-        subtopics: [
-          { id: "text-processing", title: "Text Processing" },
-          { id: "transformers", title: "Transformers" },
-          { id: "sentiment-analysis", title: "Sentiment Analysis" },
+        "id": "nlp",
+        "title": "Natural Language Processing (NLP)",
+        "description": "Explore text processing and transformers.",
+        "subtopics": [
+          { "id": "text-processing", "title": "Text Processing", "description": "Tokenization, stemming, and lemmatization." },
+          { "id": "transformers", "title": "Transformers", "description": "BERT, GPT, and other transformer models." },
+          { "id": "sentiment-analysis", "title": "Sentiment Analysis", "description": "Classify text sentiment." }
         ],
-        related: ["deep-learning", "rl"],
-        resources: [
-          { title: "NLP Course", link: "https://example.com/nlp-course" },
-          { title: "Transformers Explained", link: "https://example.com/transformers" },
-        ],
+        "related": ["deep-learning", "rl"]
       },
       {
-        id: "rl",
-        title: "Reinforcement Learning",
-        description: "Learn about agents, rewards, and policies.",
-        subtopics: [
-          { id: "q-learning", title: "Q-Learning" },
-          { id: "policy-gradients", title: "Policy Gradients" },
-          { id: "deep-rl", title: "Deep Reinforcement Learning" },
+        "id": "rl",
+        "title": "Reinforcement Learning",
+        "description": "Learn about agents, rewards, and policies.",
+        "subtopics": [
+          { "id": "q-learning", "title": "Q-Learning", "description": "Solve Markov decision processes." },
+          { "id": "policy-gradients", "title": "Policy Gradients", "description": "Optimize agent behavior." },
+          { "id": "deep-rl", "title": "Deep RL", "description": "Combine deep learning with RL." }
         ],
-        related: ["deep-learning", "nlp"],
-        resources: [
-          { title: "Reinforcement Learning Book", link: "https://example.com/rl-book" },
-          { title: "Q-Learning Tutorial", link: "https://example.com/q-learning" },
-        ],
+        "related": ["deep-learning", "nlp"]
       },
-    ],
-  },
+      {
+        "id": "recommender-systems",
+        "title": "Recommender Systems",
+        "description": "Build systems to recommend products or content.",
+        "subtopics": [
+          { "id": "collaborative-filtering", "title": "Collaborative Filtering", "description": "Recommend based on user behavior." },
+          { "id": "content-based", "title": "Content-Based Filtering", "description": "Recommend based on item features." },
+          { "id": "hybrid", "title": "Hybrid Systems", "description": "Combine collaborative and content-based methods." }
+        ],
+        "related": ["nlp", "evaluation"]
+      },
+      {
+        "id": "anomaly-detection",
+        "title": "Anomaly Detection",
+        "description": "Identify unusual patterns in data.",
+        "subtopics": [
+          { "id": "statistical-methods", "title": "Statistical Methods", "description": "Use statistical tests for anomaly detection." },
+          { "id": "ml-based", "title": "ML-Based Methods", "description": "Use supervised and unsupervised learning." },
+          { "id": "deep-learning-based", "title": "Deep Learning-Based", "description": "Use neural networks for anomaly detection." }
+        ],
+        "related": ["unsupervised", "deep-learning"]
+      },
+      {
+        "id": "current-trends",
+        "title": "Current Trends in ML",
+        "description": "Explore the latest advancements in ML.",
+        "subtopics": [
+          { "id": "generative-ai", "title": "Generative AI", "description": "GANs, VAEs, and diffusion models." },
+          { "id": "federated-learning", "title": "Federated Learning", "description": "Train models on decentralized data." },
+          { "id": "explainable-ai", "title": "Explainable AI", "description": "Make ML models interpretable." }
+        ],
+        "related": ["deep-learning", "nlp"]
+      },
+      {
+        "id": "ethics-legal",
+        "title": "Ethical and Legal Aspects of ML",
+        "description": "Understand the ethical and legal implications of ML.",
+        "subtopics": [
+          { "id": "bias-fairness", "title": "Bias and Fairness", "description": "Address bias in ML models." },
+          { "id": "privacy", "title": "Privacy", "description": "Protect user data in ML systems." },
+          { "id": "regulation", "title": "Regulation", "description": "Comply with legal frameworks like GDPR." }
+        ],
+        "related": ["current-trends", "evaluation"]
+      }
+    ]
+  }
 };

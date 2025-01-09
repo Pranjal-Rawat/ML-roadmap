@@ -103,7 +103,7 @@ const App = () => {
       setTimeout(() => {
         setShowConfetti(false);
         setNotification(null);
-      }, 5000);
+      }, 7000);
     }
   }, [completedSubtopics]);
 

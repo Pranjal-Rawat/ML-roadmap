@@ -32,6 +32,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: background 0.3s ease;
 }
 
 .section button:hover {
@@ -57,6 +58,7 @@
   max-width: 500px;
   width: 100%;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modal h2 {
@@ -71,6 +73,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: background 0.3s ease;
 }
 
 .modal button:hover {

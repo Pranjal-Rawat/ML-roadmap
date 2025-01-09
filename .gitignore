@@ -1,36 +1,37 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# Testing
 /coverage
 
-# production
+# Production
 /build
 
-# misc
+# Misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-src/App.js
+# System Files
+Thumbs.db
 
-src/index.js
-
-src/data/topics.js (or src/data/topics.json if you're using a JSON file)
-
-src/components/Section.js
-
-src/components/TopicModal.js
-
-src/styles/tailwind.css
+# Vercel
+.vercel

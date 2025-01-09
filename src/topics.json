@@ -1,87 +1,224 @@
 {
-    "foundations": [
+  "foundations": {
+    "title": "Foundations",
+    "topics": [
       {
         "id": "math",
         "title": "Mathematics for ML",
-        "description": "Learn linear algebra, calculus, and probability."
+        "description": "Learn linear algebra, calculus, and probability.",
+        "subtopics": [
+          { 
+            "id": "linear-algebra", 
+            "title": "Linear Algebra",
+            "description": "Covers vectors, matrices, eigenvalues, and eigenvectors, which are essential for understanding data transformations and ML algorithms."
+          },
+          { 
+            "id": "calculus", 
+            "title": "Calculus",
+            "description": "Focuses on derivatives, integrals, and optimization techniques used in training ML models."
+          },
+          { 
+            "id": "probability", 
+            "title": "Probability & Statistics",
+            "description": "Explores probability distributions, statistical inference, and hypothesis testing, which are crucial for data analysis and model evaluation."
+          }
+        ],
+        "related": ["programming", "data-analysis"]
       },
       {
         "id": "programming",
         "title": "Programming",
-        "description": "Master Python basics and data structures."
+        "description": "Master Python basics and data structures.",
+        "subtopics": [
+          { 
+            "id": "python-basics", 
+            "title": "Python Basics",
+            "description": "Introduces Python syntax, control structures, and functions, forming the foundation for ML programming."
+          },
+          { 
+            "id": "data-structures", 
+            "title": "Data Structures",
+            "description": "Covers lists, dictionaries, stacks, queues, and trees, which are essential for efficient data manipulation."
+          },
+          { 
+            "id": "algorithms", 
+            "title": "Algorithms",
+            "description": "Explores sorting, searching, and dynamic programming, which are critical for optimizing ML workflows."
+          }
+        ],
+        "related": ["math", "data-analysis"]
       },
       {
         "id": "data-analysis",
         "title": "Data Analysis",
-        "description": "Explore Pandas, NumPy, and data visualization."
+        "description": "Explore Pandas, NumPy, and data visualization.",
+        "subtopics": [
+          { 
+            "id": "pandas", 
+            "title": "Pandas",
+            "description": "Focuses on data manipulation and analysis using the Pandas library, including dataframes and series."
+          },
+          { 
+            "id": "numpy", 
+            "title": "NumPy",
+            "description": "Covers numerical computations and array operations, which are fundamental for handling large datasets."
+          },
+          { 
+            "id": "data-visualization", 
+            "title": "Data Visualization",
+            "description": "Explores tools like Matplotlib and Seaborn for creating visual representations of data."
+          }
+        ],
+        "related": ["math", "programming"]
       }
-    ],
-    "coreML": [
+    ]
+  },
+  "coreML": {
+    "title": "Core Machine Learning",
+    "topics": [
       {
         "id": "supervised",
         "title": "Supervised Learning",
-        "description": "Understand regression and classification."
+        "description": "Understand regression and classification.",
+        "subtopics": [
+          { 
+            "id": "regression", 
+            "title": "Regression",
+            "description": "Focuses on predicting continuous values using techniques like linear regression and polynomial regression."
+          },
+          { 
+            "id": "classification", 
+            "title": "Classification",
+            "description": "Covers algorithms like logistic regression, decision trees, and k-nearest neighbors for categorizing data."
+          },
+          { 
+            "id": "svm", 
+            "title": "Support Vector Machines (SVM)",
+            "description": "Explores SVMs for classification and regression tasks, including kernel methods."
+          }
+        ],
+        "related": ["unsupervised", "evaluation"]
       },
       {
         "id": "unsupervised",
         "title": "Unsupervised Learning",
-        "description": "Learn clustering and dimensionality reduction."
+        "description": "Learn clustering and dimensionality reduction.",
+        "subtopics": [
+          { 
+            "id": "clustering", 
+            "title": "Clustering",
+            "description": "Covers techniques like hierarchical clustering and DBSCAN for grouping similar data points."
+          },
+          { 
+            "id": "pca", 
+            "title": "Principal Component Analysis (PCA)",
+            "description": "Focuses on dimensionality reduction to simplify datasets while retaining important information."
+          },
+          { 
+            "id": "k-means", 
+            "title": "K-Means",
+            "description": "Explores the K-Means algorithm for partitioning data into clusters."
+          }
+        ],
+        "related": ["supervised", "evaluation"]
       },
       {
         "id": "evaluation",
         "title": "Model Evaluation",
-        "description": "Study metrics like accuracy, precision, and recall."
+        "description": "Study metrics like accuracy, precision, and recall.",
+        "subtopics": [
+          { 
+            "id": "metrics", 
+            "title": "Metrics",
+            "description": "Covers accuracy, precision, recall, F1-score, and ROC-AUC for evaluating model performance."
+          },
+          { 
+            "id": "cross-validation", 
+            "title": "Cross-Validation",
+            "description": "Explores techniques like k-fold cross-validation to assess model generalizability."
+          },
+          { 
+            "id": "confusion-matrix", 
+            "title": "Confusion Matrix",
+            "description": "Focuses on visualizing classification performance using true/false positives and negatives."
+          }
+        ],
+        "related": ["supervised", "unsupervised"]
       }
-    ],
-    "advanced": [
+    ]
+  },
+  "advanced": {
+    "title": "Advanced Topics",
+    "topics": [
       {
         "id": "deep-learning",
         "title": "Deep Learning",
-        "description": "Dive into neural networks, CNNs, and RNNs."
+        "description": "Dive into neural networks, CNNs, and RNNs.",
+        "subtopics": [
+          { 
+            "id": "neural-networks", 
+            "title": "Neural Networks",
+            "description": "Covers the basics of feedforward and backpropagation in artificial neural networks."
+          },
+          { 
+            "id": "cnns", 
+            "title": "Convolutional Neural Networks (CNNs)",
+            "description": "Focuses on image processing and feature extraction using convolutional layers."
+          },
+          { 
+            "id": "rnns", 
+            "title": "Recurrent Neural Networks (RNNs)",
+            "description": "Explores sequence modeling and time-series data analysis using RNNs and LSTMs."
+          }
+        ],
+        "related": ["nlp", "rl"]
       },
       {
         "id": "nlp",
         "title": "Natural Language Processing",
-        "description": "Explore text processing and transformers."
+        "description": "Explore text processing and transformers.",
+        "subtopics": [
+          { 
+            "id": "text-processing", 
+            "title": "Text Processing",
+            "description": "Covers tokenization, stemming, lemmatization, and other preprocessing techniques."
+          },
+          { 
+            "id": "transformers", 
+            "title": "Transformers",
+            "description": "Explores transformer architectures like BERT and GPT for advanced NLP tasks."
+          },
+          { 
+            "id": "sentiment-analysis", 
+            "title": "Sentiment Analysis",
+            "description": "Focuses on classifying text sentiment using supervised and unsupervised methods."
+          }
+        ],
+        "related": ["deep-learning", "rl"]
       },
       {
         "id": "rl",
         "title": "Reinforcement Learning",
-        "description": "Learn about agents, rewards, and policies."
-      }
-    ],
-    "tools": [
-      {
-        "id": "scikit-learn",
-        "title": "Scikit-Learn",
-        "description": "For traditional ML algorithms."
-      },
-      {
-        "id": "tensorflow",
-        "title": "TensorFlow",
-        "description": "For deep learning."
-      },
-      {
-        "id": "pytorch",
-        "title": "PyTorch",
-        "description": "For deep learning (research-focused)."
-      }
-    ],
-    "practice": [
-      {
-        "id": "kaggle",
-        "title": "Kaggle Competitions",
-        "description": "Participate in ML competitions to solve real-world problems."
-      },
-      {
-        "id": "projects",
-        "title": "Personal Projects",
-        "description": "Build end-to-end ML projects (e.g., recommendation systems, chatbots)."
-      },
-      {
-        "id": "open-source",
-        "title": "Open Source Contributions",
-        "description": "Contribute to ML libraries like Scikit-Learn, TensorFlow, or PyTorch."
+        "description": "Learn about agents, rewards, and policies.",
+        "subtopics": [
+          { 
+            "id": "q-learning", 
+            "title": "Q-Learning",
+            "description": "Covers the basics of Q-learning for solving Markov decision processes."
+          },
+          { 
+            "id": "policy-gradients", 
+            "title": "Policy Gradients",
+            "description": "Explores policy-based methods for optimizing agent behavior in reinforcement learning."
+          },
+          { 
+            "id": "deep-rl", 
+            "title": "Deep Reinforcement Learning",
+            "description": "Focuses on combining deep learning with reinforcement learning for complex tasks."
+          }
+        ],
+        "related": ["deep-learning", "nlp"]
       }
     ]
   }
+}

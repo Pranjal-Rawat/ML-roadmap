@@ -1,223 +1,298 @@
 {
-  "foundations": {
-    "title": "Foundations",
+  "introduction": {
+    "title": "Introduction to ML",
     "topics": [
       {
-        "id": "math",
-        "title": "Mathematics for ML",
-        "description": "Learn linear algebra, calculus, and probability.",
+        "id": "intro-ml",
+        "title": "What is Machine Learning?",
+        "description": "Overview of ML, its types, and applications.",
         "subtopics": [
-          { 
-            "id": "linear-algebra", 
-            "title": "Linear Algebra",
-            "description": "Covers vectors, matrices, eigenvalues, and eigenvectors, which are essential for understanding data transformations and ML algorithms."
-          },
-          { 
-            "id": "calculus", 
-            "title": "Calculus",
-            "description": "Focuses on derivatives, integrals, and optimization techniques used in training ML models."
-          },
-          { 
-            "id": "probability", 
-            "title": "Probability & Statistics",
-            "description": "Explores probability distributions, statistical inference, and hypothesis testing, which are crucial for data analysis and model evaluation."
-          }
+          { "id": "ml-basics", "title": "Basics of ML", "description": "Understanding supervised, unsupervised, and reinforcement learning." },
+          { "id": "ml-applications", "title": "Applications of ML", "description": "Real-world use cases of ML." }
         ],
-        "related": ["programming", "data-analysis"]
-      },
-      {
-        "id": "programming",
-        "title": "Programming",
-        "description": "Master Python basics and data structures.",
-        "subtopics": [
-          { 
-            "id": "python-basics", 
-            "title": "Python Basics",
-            "description": "Introduces Python syntax, control structures, and functions, forming the foundation for ML programming."
-          },
-          { 
-            "id": "data-structures", 
-            "title": "Data Structures",
-            "description": "Covers lists, dictionaries, stacks, queues, and trees, which are essential for efficient data manipulation."
-          },
-          { 
-            "id": "algorithms", 
-            "title": "Algorithms",
-            "description": "Explores sorting, searching, and dynamic programming, which are critical for optimizing ML workflows."
-          }
-        ],
-        "related": ["math", "data-analysis"]
-      },
-      {
-        "id": "data-analysis",
-        "title": "Data Analysis",
-        "description": "Explore Pandas, NumPy, and data visualization.",
-        "subtopics": [
-          { 
-            "id": "pandas", 
-            "title": "Pandas",
-            "description": "Focuses on data manipulation and analysis using the Pandas library, including dataframes and series."
-          },
-          { 
-            "id": "numpy", 
-            "title": "NumPy",
-            "description": "Covers numerical computations and array operations, which are fundamental for handling large datasets."
-          },
-          { 
-            "id": "data-visualization", 
-            "title": "Data Visualization",
-            "description": "Explores tools like Matplotlib and Seaborn for creating visual representations of data."
-          }
-        ],
-        "related": ["math", "programming"]
+        "resources": [
+          { "title": "ML Crash Course by Google", "link": "https://developers.google.com/machine-learning/crash-course" }
+        ]
       }
     ]
   },
-  "coreML": {
-    "title": "Core Machine Learning",
+  "mathematics": {
+    "title": "Mathematics for ML",
     "topics": [
       {
-        "id": "supervised",
-        "title": "Supervised Learning",
-        "description": "Understand regression and classification.",
+        "id": "linear-algebra",
+        "title": "Linear Algebra",
+        "description": "Vectors, matrices, eigenvalues, and eigenvectors.",
         "subtopics": [
-          { 
-            "id": "regression", 
-            "title": "Regression",
-            "description": "Focuses on predicting continuous values using techniques like linear regression and polynomial regression."
-          },
-          { 
-            "id": "classification", 
-            "title": "Classification",
-            "description": "Covers algorithms like logistic regression, decision trees, and k-nearest neighbors for categorizing data."
-          },
-          { 
-            "id": "svm", 
-            "title": "Support Vector Machines (SVM)",
-            "description": "Explores SVMs for classification and regression tasks, including kernel methods."
-          }
+          { "id": "vectors", "title": "Vectors", "description": "Understanding vector operations." },
+          { "id": "matrices", "title": "Matrices", "description": "Matrix multiplication and transformations." }
         ],
-        "related": ["unsupervised", "evaluation"]
+        "resources": [
+          { "title": "Khan Academy Linear Algebra", "link": "https://www.khanacademy.org/math/linear-algebra" }
+        ]
       },
       {
-        "id": "unsupervised",
-        "title": "Unsupervised Learning",
-        "description": "Learn clustering and dimensionality reduction.",
+        "id": "calculus",
+        "title": "Calculus",
+        "description": "Derivatives, integrals, and optimization.",
         "subtopics": [
-          { 
-            "id": "clustering", 
-            "title": "Clustering",
-            "description": "Covers techniques like hierarchical clustering and DBSCAN for grouping similar data points."
-          },
-          { 
-            "id": "pca", 
-            "title": "Principal Component Analysis (PCA)",
-            "description": "Focuses on dimensionality reduction to simplify datasets while retaining important information."
-          },
-          { 
-            "id": "k-means", 
-            "title": "K-Means",
-            "description": "Explores the K-Means algorithm for partitioning data into clusters."
-          }
+          { "id": "derivatives", "title": "Derivatives", "description": "Understanding derivatives and their applications." },
+          { "id": "optimization", "title": "Optimization", "description": "Gradient descent and other optimization techniques." }
         ],
-        "related": ["supervised", "evaluation"]
-      },
-      {
-        "id": "evaluation",
-        "title": "Model Evaluation",
-        "description": "Study metrics like accuracy, precision, and recall.",
-        "subtopics": [
-          { 
-            "id": "metrics", 
-            "title": "Metrics",
-            "description": "Covers accuracy, precision, recall, F1-score, and ROC-AUC for evaluating model performance."
-          },
-          { 
-            "id": "cross-validation", 
-            "title": "Cross-Validation",
-            "description": "Explores techniques like k-fold cross-validation to assess model generalizability."
-          },
-          { 
-            "id": "confusion-matrix", 
-            "title": "Confusion Matrix",
-            "description": "Focuses on visualizing classification performance using true/false positives and negatives."
-          }
-        ],
-        "related": ["supervised", "unsupervised"]
+        "resources": [
+          { "title": "MIT OpenCourseware Calculus", "link": "https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/" }
+        ]
       }
     ]
   },
-  "advanced": {
-    "title": "Advanced Topics",
+  "programming": {
+    "title": "Programming for ML",
     "topics": [
       {
-        "id": "deep-learning",
-        "title": "Deep Learning",
-        "description": "Dive into neural networks, CNNs, and RNNs.",
+        "id": "python-basics",
+        "title": "Python Basics",
+        "description": "Learn Python syntax, control structures, and functions.",
         "subtopics": [
-          { 
-            "id": "neural-networks", 
-            "title": "Neural Networks",
-            "description": "Covers the basics of feedforward and backpropagation in artificial neural networks."
-          },
-          { 
-            "id": "cnns", 
-            "title": "Convolutional Neural Networks (CNNs)",
-            "description": "Focuses on image processing and feature extraction using convolutional layers."
-          },
-          { 
-            "id": "rnns", 
-            "title": "Recurrent Neural Networks (RNNs)",
-            "description": "Explores sequence modeling and time-series data analysis using RNNs and LSTMs."
-          }
+          { "id": "syntax", "title": "Python Syntax", "description": "Variables, loops, and conditionals." },
+          { "id": "functions", "title": "Functions", "description": "Writing and using functions in Python." }
         ],
-        "related": ["nlp", "rl"]
+        "resources": [
+          { "title": "Python Official Documentation", "link": "https://docs.python.org/3/" }
+        ]
       },
       {
-        "id": "nlp",
-        "title": "Natural Language Processing",
-        "description": "Explore text processing and transformers.",
+        "id": "numpy-pandas",
+        "title": "NumPy and Pandas",
+        "description": "Learn numerical computations and data manipulation.",
         "subtopics": [
-          { 
-            "id": "text-processing", 
-            "title": "Text Processing",
-            "description": "Covers tokenization, stemming, lemmatization, and other preprocessing techniques."
-          },
-          { 
-            "id": "transformers", 
-            "title": "Transformers",
-            "description": "Explores transformer architectures like BERT and GPT for advanced NLP tasks."
-          },
-          { 
-            "id": "sentiment-analysis", 
-            "title": "Sentiment Analysis",
-            "description": "Focuses on classifying text sentiment using supervised and unsupervised methods."
-          }
+          { "id": "numpy", "title": "NumPy", "description": "Array operations and numerical computations." },
+          { "id": "pandas", "title": "Pandas", "description": "Data manipulation with DataFrames." }
         ],
-        "related": ["deep-learning", "rl"]
-      },
+        "resources": [
+          { "title": "NumPy Documentation", "link": "https://numpy.org/doc/" },
+          { "title": "Pandas Documentation", "link": "https://pandas.pydata.org/docs/" }
+        ]
+      }
+    ]
+  },
+  "data-preprocessing": {
+    "title": "Data Preprocessing",
+    "topics": [
       {
-        "id": "rl",
-        "title": "Reinforcement Learning",
-        "description": "Learn about agents, rewards, and policies.",
+        "id": "cleaning",
+        "title": "Data Cleaning",
+        "description": "Handle missing data and outliers.",
         "subtopics": [
-          { 
-            "id": "q-learning", 
-            "title": "Q-Learning",
-            "description": "Covers the basics of Q-learning for solving Markov decision processes."
-          },
-          { 
-            "id": "policy-gradients", 
-            "title": "Policy Gradients",
-            "description": "Explores policy-based methods for optimizing agent behavior in reinforcement learning."
-          },
-          { 
-            "id": "deep-rl", 
-            "title": "Deep Reinforcement Learning",
-            "description": "Focuses on combining deep learning with reinforcement learning for complex tasks."
-          }
+          { "id": "missing-data", "title": "Handling Missing Data", "description": "Imputation techniques." },
+          { "id": "outliers", "title": "Handling Outliers", "description": "Detecting and removing outliers." }
         ],
-        "related": ["deep-learning", "nlp"]
+        "resources": [
+          { "title": "Scikit-learn Data Preprocessing", "link": "https://scikit-learn.org/stable/modules/preprocessing.html" }
+        ]
+      }
+    ]
+  },
+  "supervised-learning": {
+    "title": "Supervised Learning Algorithms",
+    "topics": [
+      {
+        "id": "linear-regression",
+        "title": "Linear Regression",
+        "description": "Predict continuous values using linear regression.",
+        "subtopics": [
+          { "id": "simple-linear", "title": "Simple Linear Regression", "description": "Single variable regression." },
+          { "id": "multiple-linear", "title": "Multiple Linear Regression", "description": "Regression with multiple variables." }
+        ],
+        "resources": [
+          { "title": "Linear Regression Tutorial", "link": "https://www.analyticsvidhya.com/blog/2021/05/all-you-need-to-know-about-linear-regression/" }
+        ]
+      }
+    ]
+  },
+  "unsupervised-learning": {
+    "title": "Unsupervised Learning Algorithms",
+    "topics": [
+      {
+        "id": "k-means",
+        "title": "K-Means Clustering",
+        "description": "Partition data into clusters.",
+        "subtopics": [
+          { "id": "k-means-basics", "title": "K-Means Basics", "description": "Understanding the K-Means algorithm." },
+          { "id": "k-means-applications", "title": "Applications of K-Means", "description": "Real-world use cases." }
+        ],
+        "resources": [
+          { "title": "K-Means Clustering Tutorial", "link": "https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning" }
+        ]
+      }
+    ]
+  },
+  "reinforcement-learning": {
+    "title": "Reinforcement Learning",
+    "topics": [
+      {
+        "id": "q-learning",
+        "title": "Q-Learning",
+        "description": "Learn the basics of Q-Learning.",
+        "subtopics": [
+          { "id": "q-learning-basics", "title": "Q-Learning Basics", "description": "Understanding the Q-Learning algorithm." },
+          { "id": "q-learning-applications", "title": "Applications of Q-Learning", "description": "Real-world use cases." }
+        ],
+        "resources": [
+          { "title": "Q-Learning Tutorial", "link": "https://www.geeksforgeeks.org/q-learning-in-python/" }
+        ]
+      }
+    ]
+  },
+  "deep-learning": {
+    "title": "Deep Learning",
+    "topics": [
+      {
+        "id": "neural-networks",
+        "title": "Neural Networks",
+        "description": "Learn the basics of neural networks.",
+        "subtopics": [
+          { "id": "nn-basics", "title": "Neural Network Basics", "description": "Understanding feedforward and backpropagation." },
+          { "id": "nn-applications", "title": "Applications of Neural Networks", "description": "Real-world use cases." }
+        ],
+        "resources": [
+          { "title": "Neural Networks Tutorial", "link": "https://www.tensorflow.org/tutorials" }
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "title": "Evaluation of ML Models",
+    "topics": [
+      {
+        "id": "metrics",
+        "title": "Evaluation Metrics",
+        "description": "Learn about accuracy, precision, recall, and F1-score.",
+        "subtopics": [
+          { "id": "accuracy", "title": "Accuracy", "description": "Understanding accuracy as a metric." },
+          { "id": "precision-recall", "title": "Precision and Recall", "description": "Understanding precision and recall." }
+        ],
+        "resources": [
+          { "title": "Evaluation Metrics Tutorial", "link": "https://scikit-learn.org/stable/modules/model_evaluation.html" }
+        ]
+      }
+    ]
+  },
+  "ensemble-learning": {
+    "title": "Ensemble Learning",
+    "topics": [
+      {
+        "id": "bagging",
+        "title": "Bagging",
+        "description": "Learn about bootstrap aggregating.",
+        "subtopics": [
+          { "id": "bagging-basics", "title": "Bagging Basics", "description": "Understanding the bagging technique." },
+          { "id": "random-forest", "title": "Random Forest", "description": "Understanding random forests." }
+        ],
+        "resources": [
+          { "title": "Bagging Tutorial", "link": "https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/" }
+        ]
+      }
+    ]
+  },
+  "dimensionality-reduction": {
+    "title": "Dimensionality Reduction Techniques",
+    "topics": [
+      {
+        "id": "pca",
+        "title": "Principal Component Analysis (PCA)",
+        "description": "Learn about PCA for dimensionality reduction.",
+        "subtopics": [
+          { "id": "pca-basics", "title": "PCA Basics", "description": "Understanding PCA." },
+          { "id": "pca-applications", "title": "Applications of PCA", "description": "Real-world use cases." }
+        ],
+        "resources": [
+          { "title": "PCA Tutorial", "link": "https://scikit-learn.org/stable/modules/decomposition.html#pca" }
+        ]
+      }
+    ]
+  },
+  "nlp": {
+    "title": "Natural Language Processing (NLP)",
+    "topics": [
+      {
+        "id": "text-processing",
+        "title": "Text Processing",
+        "description": "Learn about tokenization, stemming, and lemmatization.",
+        "subtopics": [
+          { "id": "tokenization", "title": "Tokenization", "description": "Breaking text into tokens." },
+          { "id": "stemming-lemmatization", "title": "Stemming and Lemmatization", "description": "Reducing words to their base forms." }
+        ],
+        "resources": [
+          { "title": "NLTK Tutorial", "link": "https://www.nltk.org/" }
+        ]
+      }
+    ]
+  },
+  "recommender-systems": {
+    "title": "Recommender Systems",
+    "topics": [
+      {
+        "id": "collaborative-filtering",
+        "title": "Collaborative Filtering",
+        "description": "Learn about user-based and item-based filtering.",
+        "subtopics": [
+          { "id": "user-based", "title": "User-Based Filtering", "description": "Recommendations based on user behavior." },
+          { "id": "item-based", "title": "Item-Based Filtering", "description": "Recommendations based on item similarity." }
+        ],
+        "resources": [
+          { "title": "Collaborative Filtering Tutorial", "link": "https://towardsdatascience.com/collaborative-filtering-based-recommendation-systems-exemplified-7f10e71b5d3a" }
+        ]
+      }
+    ]
+  },
+  "anomaly-detection": {
+    "title": "Anomaly Detection",
+    "topics": [
+      {
+        "id": "statistical-methods",
+        "title": "Statistical Methods",
+        "description": "Learn about statistical techniques for anomaly detection.",
+        "subtopics": [
+          { "id": "z-score", "title": "Z-Score", "description": "Detecting anomalies using z-scores." },
+          { "id": "iqr", "title": "Interquartile Range (IQR)", "description": "Detecting anomalies using IQR." }
+        ],
+        "resources": [
+          { "title": "Anomaly Detection Tutorial", "link": "https://www.analyticsvidhya.com/blog/2021/05/anomaly-detection-using-statistical-methods/" }
+        ]
+      }
+    ]
+  },
+  "current-trends": {
+    "title": "Current Trends in ML",
+    "topics": [
+      {
+        "id": "generative-ai",
+        "title": "Generative AI",
+        "description": "Learn about GANs, VAEs, and diffusion models.",
+        "subtopics": [
+          { "id": "gans", "title": "GANs", "description": "Generative Adversarial Networks." },
+          { "id": "diffusion-models", "title": "Diffusion Models", "description": "Generating data through iterative denoising." }
+        ],
+        "resources": [
+          { "title": "Generative AI Tutorial", "link": "https://openai.com/research/generative-models" }
+        ]
+      }
+    ]
+  },
+  "ethics-legal": {
+    "title": "Ethical and Legal Aspects of ML",
+    "topics": [
+      {
+        "id": "bias-fairness",
+        "title": "Bias and Fairness",
+        "description": "Learn about bias in ML models and fairness techniques.",
+        "subtopics": [
+          { "id": "bias-detection", "title": "Bias Detection", "description": "Identifying bias in datasets and models." },
+          { "id": "fairness-techniques", "title": "Fairness Techniques", "description": "Mitigating bias in ML models." }
+        ],
+        "resources": [
+          { "title": "Fairness in ML Tutorial", "link": "https://fairmlbook.org/" }
+        ]
       }
     ]
   }

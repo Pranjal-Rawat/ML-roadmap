@@ -12,6 +12,10 @@ export const topics = {
           { id: "probability", title: "Probability & Statistics" },
         ],
         related: ["programming", "data-analysis"],
+        resources: [
+          { title: "Linear Algebra Course", link: "https://example.com/linear-algebra" },
+          { title: "Calculus Book", link: "https://example.com/calculus-book" },
+        ],
       },
       {
         id: "programming",
@@ -23,6 +27,10 @@ export const topics = {
           { id: "algorithms", title: "Algorithms" },
         ],
         related: ["math", "data-analysis"],
+        resources: [
+          { title: "Python Crash Course", link: "https://example.com/python-crash-course" },
+          { title: "Data Structures Tutorial", link: "https://example.com/data-structures" },
+        ],
       },
       {
         id: "data-analysis",
@@ -34,6 +42,10 @@ export const topics = {
           { id: "data-visualization", title: "Data Visualization" },
         ],
         related: ["math", "programming"],
+        resources: [
+          { title: "Pandas Documentation", link: "https://pandas.pydata.org/" },
+          { title: "Matplotlib Tutorial", link: "https://example.com/matplotlib" },
+        ],
       },
     ],
   },
@@ -50,6 +62,10 @@ export const topics = {
           { id: "svm", title: "Support Vector Machines (SVM)" },
         ],
         related: ["unsupervised", "evaluation"],
+        resources: [
+          { title: "Supervised Learning Course", link: "https://example.com/supervised-learning" },
+          { title: "SVM Tutorial", link: "https://example.com/svm-tutorial" },
+        ],
       },
       {
         id: "unsupervised",
@@ -61,6 +77,10 @@ export const topics = {
           { id: "k-means", title: "K-Means" },
         ],
         related: ["supervised", "evaluation"],
+        resources: [
+          { title: "Unsupervised Learning Course", link: "https://example.com/unsupervised-learning" },
+          { title: "PCA Explained", link: "https://example.com/pca-explained" },
+        ],
       },
       {
         id: "evaluation",
@@ -72,6 +92,10 @@ export const topics = {
           { id: "confusion-matrix", title: "Confusion Matrix" },
         ],
         related: ["supervised", "unsupervised"],
+        resources: [
+          { title: "Model Evaluation Guide", link: "https://example.com/model-evaluation" },
+          { title: "Confusion Matrix Tutorial", link: "https://example.com/confusion-matrix" },
+        ],
       },
     ],
   },
@@ -88,6 +112,10 @@ export const topics = {
           { id: "rnns", title: "Recurrent Neural Networks (RNNs)" },
         ],
         related: ["nlp", "rl"],
+        resources: [
+          { title: "Deep Learning Book", link: "https://example.com/deep-learning-book" },
+          { title: "CNN Tutorial", link: "https://example.com/cnn-tutorial" },
+        ],
       },
       {
         id: "nlp",
@@ -99,6 +127,10 @@ export const topics = {
           { id: "sentiment-analysis", title: "Sentiment Analysis" },
         ],
         related: ["deep-learning", "rl"],
+        resources: [
+          { title: "NLP Course", link: "https://example.com/nlp-course" },
+          { title: "Transformers Explained", link: "https://example.com/transformers" },
+        ],
       },
       {
         id: "rl",
@@ -110,6 +142,10 @@ export const topics = {
           { id: "deep-rl", title: "Deep Reinforcement Learning" },
         ],
         related: ["deep-learning", "nlp"],
+        resources: [
+          { title: "Reinforcement Learning Book", link: "https://example.com/rl-book" },
+          { title: "Q-Learning Tutorial", link: "https://example.com/q-learning" },
+        ],
       },
     ],
   },

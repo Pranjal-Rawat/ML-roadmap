@@ -26,6 +26,21 @@ const App = () => {
     height: window.innerHeight,
   });
   const [pageHeight, setPageHeight] = useState(document.body.scrollHeight);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  // Add dark mode class to the body
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   // Update window size and page height on resize or scroll
   useEffect(() => {
@@ -62,6 +77,34 @@ const App = () => {
   // Save completed subtopics to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem("completedSubtopics", JSON.stringify(completedSubtopics));
+  }, [completedSubtopics]);
+
+  // Calculate overall progress
+  const calculateOverallProgress = () => {
+    const allTopics = [
+      ...topics.foundations.topics,
+      ...topics.coreML.topics,
+      ...topics.advanced.topics,
+    ];
+    const totalSubtopics = allTopics.reduce(
+      (acc, topic) => acc + topic.subtopics.length,
+      0
+    );
+    const completed = Object.values(completedSubtopics).filter(Boolean).length;
+    return totalSubtopics > 0 ? (completed / totalSubtopics) * 100 : 0;
+  };
+
+  // Check if the entire roadmap is completed
+  useEffect(() => {
+    const overallProgress = calculateOverallProgress();
+    if (overallProgress === 100) {
+      setShowConfetti(true);
+      setNotification("🎉 Congratulations! You've completed the entire roadmap!");
+      setTimeout(() => {
+        setShowConfetti(false);
+        setNotification(null);
+      }, 5000);
+    }
   }, [completedSubtopics]);
 
   const handleTopicClick = (topic) => {
@@ -119,7 +162,27 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-purple-50 p-8">
+    <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-r from-blue-50 to-purple-50"} p-8`}>
+      <button
+        onClick={toggleDarkMode}
+        className="fixed top-4 right-4 p-2 bg-blue-500 text-white rounded-lg"
+      >
+        {darkMode ? "🌙" : "☀️"}
+      </button>
+
+      {/* Overall Progress Bar */}
+      <div className="mb-8">
+        <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+          Overall Progress: {calculateOverallProgress().toFixed(1)}%
+        </h2>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+          <div
+            className="bg-blue-500 h-4 rounded-full"
+            style={{ width: `${calculateOverallProgress()}%` }}
+          ></div>
+        </div>
+      </div>
+
       {showConfetti && (
         <Confetti
           width={windowSize.width}
@@ -127,7 +190,7 @@ const App = () => {
         />
       )}
       {notification && <NotificationCard message={notification} onClose={() => setNotification(null)} />}
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-8 animate-fade-in">
+      <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-8 animate-fade-in">
         Machine Learning Roadmap
       </h1>
 

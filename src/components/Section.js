@@ -16,14 +16,19 @@ const Section = ({ title, topics, onTopicClick, onSubtopicComplete, onSubtopicCl
     }
   };
 
+  const calculateProgress = (subtopics) => {
+    const completed = subtopics.filter((subtopic) => subtopic.completed).length;
+    return (completed / subtopics.length) * 100;
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
     >
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
+      <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4 border-b-2 border-blue-500 pb-2">
         {getIcon(title)} {title}
       </h2>
       <div className="space-y-4">
@@ -37,11 +42,17 @@ const Section = ({ title, topics, onTopicClick, onSubtopicComplete, onSubtopicCl
           >
             <button
               onClick={() => onTopicClick(topic)}
-              className={`w-full text-left bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200 ${topic.completed ? "line-through" : ""}`}
+              className="w-full text-left bg-blue-100 dark:bg-blue-900 hover:bg-blue-200 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 font-medium py-2 px-4 rounded-lg transition-colors duration-200"
             >
               {topic.title}
             </button>
             <div className="pl-4 space-y-1">
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
+                <div
+                  className="bg-blue-500 h-2 rounded-full"
+                  style={{ width: `${calculateProgress(topic.subtopics)}%` }}
+                ></div>
+              </div>
               {topic.subtopics?.map((subtopic) => (
                 <div key={subtopic.id} className="flex items-center">
                   <input
@@ -52,7 +63,7 @@ const Section = ({ title, topics, onTopicClick, onSubtopicComplete, onSubtopicCl
                   />
                   <button
                     onClick={() => onSubtopicClick(subtopic)}
-                    className={`text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200 ${subtopic.completed ? "line-through" : ""}`}
+                    className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                   >
                     {subtopic.title}
                   </button>
@@ -60,7 +71,7 @@ const Section = ({ title, topics, onTopicClick, onSubtopicComplete, onSubtopicCl
               ))}
             </div>
             {topic.related?.length > 0 && (
-              <div className="pl-4 text-sm text-gray-500">
+              <div className="pl-4 text-sm text-gray-500 dark:text-gray-400">
                 Related:{" "}
                 {topic.related.map((related, index) => (
                   <span key={related} className="inline-flex items-center">

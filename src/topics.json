@@ -1,0 +1,87 @@
+{
+    "foundations": [
+      {
+        "id": "math",
+        "title": "Mathematics for ML",
+        "description": "Learn linear algebra, calculus, and probability."
+      },
+      {
+        "id": "programming",
+        "title": "Programming",
+        "description": "Master Python basics and data structures."
+      },
+      {
+        "id": "data-analysis",
+        "title": "Data Analysis",
+        "description": "Explore Pandas, NumPy, and data visualization."
+      }
+    ],
+    "coreML": [
+      {
+        "id": "supervised",
+        "title": "Supervised Learning",
+        "description": "Understand regression and classification."
+      },
+      {
+        "id": "unsupervised",
+        "title": "Unsupervised Learning",
+        "description": "Learn clustering and dimensionality reduction."
+      },
+      {
+        "id": "evaluation",
+        "title": "Model Evaluation",
+        "description": "Study metrics like accuracy, precision, and recall."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "deep-learning",
+        "title": "Deep Learning",
+        "description": "Dive into neural networks, CNNs, and RNNs."
+      },
+      {
+        "id": "nlp",
+        "title": "Natural Language Processing",
+        "description": "Explore text processing and transformers."
+      },
+      {
+        "id": "rl",
+        "title": "Reinforcement Learning",
+        "description": "Learn about agents, rewards, and policies."
+      }
+    ],
+    "tools": [
+      {
+        "id": "scikit-learn",
+        "title": "Scikit-Learn",
+        "description": "For traditional ML algorithms."
+      },
+      {
+        "id": "tensorflow",
+        "title": "TensorFlow",
+        "description": "For deep learning."
+      },
+      {
+        "id": "pytorch",
+        "title": "PyTorch",
+        "description": "For deep learning (research-focused)."
+      }
+    ],
+    "practice": [
+      {
+        "id": "kaggle",
+        "title": "Kaggle Competitions",
+        "description": "Participate in ML competitions to solve real-world problems."
+      },
+      {
+        "id": "projects",
+        "title": "Personal Projects",
+        "description": "Build end-to-end ML projects (e.g., recommendation systems, chatbots)."
+      },
+      {
+        "id": "open-source",
+        "title": "Open Source Contributions",
+        "description": "Contribute to ML libraries like Scikit-Learn, TensorFlow, or PyTorch."
+      }
+    ]
+  }
